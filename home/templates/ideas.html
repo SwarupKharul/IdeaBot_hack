@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+{% for detail in details %}
+<br><br><br>
+Title: {{detail.title}}<br>
+Description: {{detail.description}}<br>
+Tech stack recommended: {{detail.stack}}<br>
+{% endfor %}
+
+{% endblock %}

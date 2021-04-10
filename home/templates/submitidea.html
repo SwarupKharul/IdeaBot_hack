@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+
+<body>
+    <div class="box container">
+        {% if error %}
+        <div class="alert alert-danger" role="alert">
+            {{ error }}
+        </div>
+        {% endif %}
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="banner">
+                <h1>
+                    <center>New Book</center>
+                </h1>
+            </div>
+            <div class="item">
+                <h4>Idea Title</h4>
+                <div class="name-item">
+                    <input type="text" name="title" id="title" placeholder="title" required />
+                </div>
+
+                <div class="item">
+                    <h4>Description</h4>
+                    <textarea name="description" id="description" rows="3" required></textarea>
+                </div>
+            </div>
+            <center><button type="submit" class="btn btn-primary">Publish</button></center>
+        </form>
+    </div>
+</body>
+
+{% endblock %}
