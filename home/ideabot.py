@@ -61,7 +61,7 @@ def stackfind(idea):
   i4=set(stemmed).intersection(synonymns4)
 
   if len(i4)>0:
-    ml.append("AppDev")
+    ml.append("AppDev","Flutter","Android Studio")
 
   L3=["video","edit","editing"] #AE
   synonymns3=[]
