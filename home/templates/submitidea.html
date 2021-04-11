@@ -3,8 +3,26 @@
 {% block content %}
 
 <link rel="stylesheet" href="{% static 'frontend/submitidea.css' %}">
+
+<style>
+    .button2 {
+        align-items: center;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        border-radius: 3px;
+        background: tomato;
+        color: white;
+        padding: 4%;
+    }
+
+    .button2:hover {
+        background: rgb(219, 145, 7);
+        transition: all 0.3s ease;
+    }
+</style>
 <br>
-<div class="box container">
+<div class="container">
     {% if error %}
     <div class="alert alert-danger" role="alert">
         {{ error }}
@@ -12,21 +30,21 @@
     {% endif %}
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        <div class="banner">
-            <h1>
-                <center>New Idea</center>
-            </h1>
-        </div>
         <div class="container">
             <div class="card ">
                 <span></span>
                 <div class="content">
                     <div class="wrapper">
                         <form method="POST">
+                            <h1>
+                                <center>New Idea</center>
+                            </h1>
                             <div class="group">
                                 <input type="text" name="title" id="title" placeholder="Title" required />
-                                <textarea name="description" id="description" rows="3" required></textarea>
-                                <a href="#" class="generate"><input type="submit" /></a>
+                                <textarea name="description" id="description" rows="3" placeholder="Description"
+                                    required></textarea>
+                                <br>
+                                <button class="button2" type="submit">Generate Idea</button>
                             </div>
                         </form>
                     </div>

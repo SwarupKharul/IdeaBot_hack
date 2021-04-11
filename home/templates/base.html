@@ -13,6 +13,24 @@
     <title>IdeaBot</title>
 </head>
 
+<style>
+    .button1 {
+        align-items: center;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        border-radius: 3px;
+        background: tomato;
+        color: white;
+        padding: 4%;
+    }
+
+    .button1:hover {
+        background: rgb(219, 145, 7);
+        transition: all 0.3s ease;
+    }
+</style>
+
 <body>
     <div>
         <nav class="navbar">
@@ -33,7 +51,7 @@
                     <li>
                         <form method="POST" action="{% url 'logoutuser' %}" class="navbar__btn">
                             {% csrf_token %}
-                            <button id="signOutBtn" type="submit" class="button">Logout</button>
+                            <button id="signOutBtn" type="submit" class="button1">Logout</button>
                         </form>
                     </li>
                 </ul>

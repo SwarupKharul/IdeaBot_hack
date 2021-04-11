@@ -24,6 +24,7 @@ urlpatterns = [
     path('logout/', views.logoutuser, name='logoutuser'),
     path('ideas/', views.ideas, name='ideas'),
     path('ideas/', views.ideas, name='ideas'),
-    path('submitidea/', views.submitidea, name='submitidea')
+    path('submitidea/', views.submitidea, name='submitidea'),
+    path('idea/<int:idea_pk>/', views.viewidea, name='viewidea'),
 ]
 

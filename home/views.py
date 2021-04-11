@@ -73,3 +73,18 @@ def submitidea(request):
 @login_required
 def viewprofile(request):
     pass
+
+@login_required
+def viewidea(request, idea_pk):
+    idea = get_object_or_404(Idea, pk=idea_pk, user=request.user)
+    if request.method == 'GET':
+        form = IdeaForm(instance=idea)
+        return render(request, 'viewidea.html', {'idea': idea, 'form': form})
+    else:
+        try:
+            form = IdeaForm(request.POST, instance=idea)
+            form.save()
+            return redirect('home')
+        except ValueError:
+            return render(request, 'viewidea.html',
+                          {'idea': idea, 'error': 'Wrong data put in. Try Again'})

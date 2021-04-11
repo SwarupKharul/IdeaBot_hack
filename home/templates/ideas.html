@@ -2,28 +2,27 @@
 {% load static %}
 {% block content %}
 <link rel="stylesheet" href="{% static 'frontend/submitidea.css' %}">
+<div>
+    {% for detail in details %}
+    <div class="container">
+        <div class="card ">
+            <span></span>
+            <div class="content">
+                <h2 style="color: aliceblue;">{{detail.title}}</h2>
+                <br><br>
+                <p>{{detail.description}}</p>
+            </div>
+        </div>
 
-{% for detail in details %}
-<div class="container">
-    <div class="card ">
-        <span></span>
-        <div class="content">
-            <h2 style="color: aliceblue;">{{detail.title}}</h2>
-            <br><br>
-            <p>{{detail.description}}</p>
+        <div class="card ">
+            <span></span>
+            <div class="content">
+                <h2 style="color: aliceblue;">Tech Stack recommended</h2>
+                <br><br>
+                <h1>{{detail.stack}}</h1>
+            </div>
         </div>
     </div>
-
-    <div class="card ">
-        <span></span>
-        <div class="content">
-            <h2 style="color: aliceblue;">Tech Stack recommended</h2>
-            <br><br>
-            <h1>{{detail.stack}}</h1>
-        </div>
-    </div>
+    {% endfor %}
 </div>
-{% endfor %}
-
-
 {% endblock %}
