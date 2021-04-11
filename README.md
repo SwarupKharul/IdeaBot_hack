@@ -1,7 +1,7 @@
 # IdeaBot
 ### Objective📓:
 We aim to ease the process of developing a project by providing the users the perfect tech stack for their individual ideas tailored to their capabilities.
-The problem we are aiming to solve🤔:
+### The problem we are aiming to solve🤔:
 We aim to solve the problem faced by the users in manually searching for and discovering the technical specifics and libraries which would be necessary to implement their ideas. Our goal is to substantially reduce the time wasted by users in understanding the optimum technologies they would have to use to bring their projects to life.
 
 ### Novelty of our project✨:
@@ -21,4 +21,8 @@ Apart from offering the best tech stack suited to the user, we would provide a c
 ### Business Model:
 Our revenue sources to maintain and constantly update IdeaBot would be paid advertisements and user donations.
 ### Developed by🧑‍💼:
+- [Swarup Kharul](https://github.com/SwarupKharul)
+- [Neel Ghoshal](https://github.com/NeelGhoshal)
+- [Divit Agrawal](https://github.com/DivitAgrawal)
+- [Ishita Chauhan](https://github.com/ishizzz)
 
