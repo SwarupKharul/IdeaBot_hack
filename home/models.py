@@ -37,7 +37,7 @@ class MyUser(AbstractBaseUser):
         max_length=255,
         unique=True,
     )
-    mob = models.IntegerField()
+    mob = models.CharField(max_length=100, null=True)
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False) 
 

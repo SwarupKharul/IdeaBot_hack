@@ -6,7 +6,7 @@
   }
   
   .navbar {
-    background: rgba(14, 13, 13);
+    background: rgb(0, 0, 0);
     height: 80px;
     display: flex;
     align-items: center;
@@ -179,7 +179,6 @@
       transform: translateY(-8px) rotate(135deg);
     }
   }
-  
   h2{
     color: tomato;
     text-align: center;

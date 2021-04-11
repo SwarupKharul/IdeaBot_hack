@@ -42,6 +42,7 @@
                     <span class="bar"></span>
                 </div>
                 <ul class="navbar__menu">
+                    <h3>{{user.mob}}</h3>
                     <li class="navbar__items">
                         <a href="{% url 'ideas' %}" class="navbar__links">Home</a>
                     </li>
@@ -62,7 +63,8 @@
             {% endblock %}
         </div>
     </div>
-    <script src="{% static 'frontend/base.js' %}"></script>
+
 </body>
+<script src="{% static 'frontend/base.js' %}"></script>
 
 </html>
