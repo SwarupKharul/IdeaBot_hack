@@ -14,32 +14,36 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <img src="{% static 'frontend/logo.png' %}" width="100" height="100" alt="">
-        IdeaBot<div class="navbar__container">
-            <div class="navbar__toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+    <div>
+        <nav class="navbar">
+            <img src="{% static 'frontend/logo.png' %}" width="100" height="100" alt="">
+            IdeaBot<div class="navbar__container">
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="navbar__menu">
+                    <li class="navbar__items">
+                        <a href="{% url 'ideas' %}" class="navbar__links">Home</a>
+                    </li>
+                    <li class="navbar__items">
+                        <a href="{% url 'submitidea' %}" class="navbar__links">Add Idea</a>
+                    </li>
+                    <li>
+                        <form method="POST" action="{% url 'logoutuser' %}" class="navbar__btn">
+                            {% csrf_token %}
+                            <button id="signOutBtn" type="submit" class="button">Logout</button>
+                        </form>
+                    </li>
+                </ul>
             </div>
-            <ul class="navbar__menu">
-                <li class="navbar__items">
-                    <a href="{% url 'ideas' %}" class="navbar__links">Home</a>
-                </li>
-                <li class="navbar__items">
-                    <a href="{% url 'submitidea' %}" class="navbar__links">Submit Idea</a>
-                </li>
-                <li>
-                    <form method="POST" action="{% url 'logoutuser' %}" class="navbar__btn">
-                        {% csrf_token %}
-                        <button id="signOutBtn" type="submit" class="button">Logout</button>
-                    </form>
-                </li>
-            </ul>
+        </nav>
+        <div class="navbar_content">
+            {% block content %}
+            {% endblock %}
         </div>
-    </nav>
-    {% block content %}
-    {% endblock %}
+    </div>
     <script src="{% static 'frontend/base.js' %}"></script>
 </body>
 

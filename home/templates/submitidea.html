@@ -2,36 +2,38 @@
 {% load static %}
 {% block content %}
 
-
-
-<body>
-    <div class="box container">
-        {% if error %}
-        <div class="alert alert-danger" role="alert">
-            {{ error }}
-        </div>
-        {% endif %}
-        <form method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            <div class="banner">
-                <h1>
-                    <center>New Idea</center>
-                </h1>
-            </div>
-            <div class="item">
-                <h4>Idea Title</h4>
-                <div class="name-item">
-                    <input type="text" name="title" id="title" placeholder="title" required />
-                </div>
-
-                <div class="item">
-                    <h4>Description</h4>
-                    <textarea name="description" id="description" rows="3" required></textarea>
-                </div>
-            </div>
-            <center><button type="submit" class="btn btn-primary">Publish</button></center>
-        </form>
+<link rel="stylesheet" href="{% static 'frontend/submitidea.css' %}">
+<br>
+<div class="box container">
+    {% if error %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
     </div>
-</body>
+    {% endif %}
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="banner">
+            <h1>
+                <center>New Idea</center>
+            </h1>
+        </div>
+        <div class="container">
+            <div class="card ">
+                <span></span>
+                <div class="content">
+                    <div class="wrapper">
+                        <form method="POST">
+                            <div class="group">
+                                <input type="text" name="title" id="title" placeholder="Title" required />
+                                <textarea name="description" id="description" rows="3" required></textarea>
+                                <a href="#" class="generate"><input type="submit" /></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
 
 {% endblock %}

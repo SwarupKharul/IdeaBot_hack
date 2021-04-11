@@ -98,6 +98,7 @@ body {
 
 .content {
   height: 400px;
+  width:40vw;
   z-index: 1;
   position: relative;
   left: 0;
