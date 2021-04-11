@@ -23,6 +23,6 @@ Our revenue sources to maintain and constantly update IdeaBot would be paid adve
 ### Developed by🧑‍💼:
 - [Swarup Kharul](https://github.com/SwarupKharul)
 - [Neel Ghoshal](https://github.com/NeelGhoshal)
-- [Divit Agrawal](https://github.com/DivitAgrawal)
+- [Divit Agrawal](https://github.com/Divit-Agrawal)
 - [Ishita Chauhan](https://github.com/ishizzz)
 
